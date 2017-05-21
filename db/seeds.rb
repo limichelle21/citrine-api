@@ -25,9 +25,9 @@ units = Unit.create([
     { name: 'minute', stdunit_id: 1 },
     { name: 'min', stdunit_id: 1 },
     { name: 'hour', stdunit_id: 2 },
-    { name: '%68', stdunit_id: 2 },
+    { name: 'h', stdunit_id: 2 },
     { name: 'day', stdunit_id: 3 },
-    { name: '%64', stdunit_id: 3 },
+    { name: 'd', stdunit_id: 3 },
     { name: 'degree', stdunit_id: 4 },
     { name: '%C2%BA', stdunit_id: 4 },
     { name: '%BA', stdunit_id: 4 },
@@ -37,9 +37,9 @@ units = Unit.create([
     { name: 'hectare', stdunit_id: 7 },
     { name: 'ha', stdunit_id: 7 },
     { name: 'litre', stdunit_id: 8 },
-    { name: '%4C', stdunit_id: 8 },
+    { name: 'L', stdunit_id: 8 },
     { name: 'tonne', stdunit_id: 9 },
-    { name: '%74', stdunit_id: 9 },
+    { name: 't', stdunit_id: 9 },
     ])
 
 

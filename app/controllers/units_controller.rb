@@ -42,7 +42,6 @@ class UnitsController < ApplicationController
           end
       end
       return factor_string
-      
 
       
       # MATH - evaluate the factors in original string format
