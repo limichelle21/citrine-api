@@ -10,13 +10,17 @@ end
 gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
 
+
+# Use postgresql as database
+# Use Puma as the app server
+
 group :production do
     gem 'pg'
+    gem 'puma'
 end
 
 
-# Use Puma as the app server
-gem 'puma', '~> 3.7'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
