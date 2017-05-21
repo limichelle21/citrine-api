@@ -14,11 +14,14 @@ class UnitsController < ApplicationController
           Unit.find_by(name: x).stdunit
       end  
       
+      # copy of original string for units
       
-      inputs # original array of units
-      si # replacement array of si unit objects
-      unit_string = units.dup # copy of original string
-      factor_string = units.dup # copy of original string
+      unit_string = units.dup 
+      
+      
+      # copy of original string for factors
+      
+      factor_string = units.dup 
       
       
       # replace all words in original string with si unit names
@@ -46,15 +49,10 @@ class UnitsController < ApplicationController
       
       m_factor = eval(factor_string).round(14)
       
-      
-      
       render json: { "unit_name" => unit_string, "multiplication_factor" => m_factor }
-      
-      
+            
   end
-    
-    
-    
+
     
 
 end
