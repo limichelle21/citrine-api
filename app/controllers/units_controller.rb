@@ -48,7 +48,9 @@ class UnitsController < ApplicationController
       
       
       
-      render json: { "unit_name" : unit_string, "multiplication_factor" : m_factor }
+      render json: => { "unit_name" => unit_string, "multiplication_factor" => m_factor }
+      
+      
   end
     
     
