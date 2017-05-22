@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+SI-Unit Conversion Web Service
 
-* Ruby version
+Ruby 2.3.1
+Rails 5.1.1
 
-* System dependencies
+This web service takes a string of units multiplied and/or divided, and converts these units into their corresponding SI units along with a multiplication factor that can be used to convert the original units into the SI units. 
 
-* Configuration
+The service will return a JSON object. 
 
-* Database creation
 
-* Database initialization
+Input units and their corresponding SI units have been seeded into the database. 
 
-* How to run the test suite
+Development: sqlite3
+Production: postgresql
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
