@@ -1,5 +1,5 @@
 class UnitsController < ApplicationController
-    
+
     def si
       units = params[:units]
 
@@ -7,12 +7,11 @@ class UnitsController < ApplicationController
           inputs = units.scan(/\w+|"|'|°/)
 
           si = inputs.map do |x|
-              puts "><><><><><> #{x.inspect}"
               Unit.find_by(name: x).stdunit
-          end  
+          end
 
-          unit_string = units.dup 
-          factor_string = units.dup 
+          unit_string = units.dup
+          factor_string = units.dup
 
           inputs.each.with_index do |c, i|
               unit_string.scan(c).size.times do
@@ -25,16 +24,16 @@ class UnitsController < ApplicationController
                   factor_string.gsub!(c, "#{si[i].factor}")
               end
           end
-          
+
           m_factor = eval(factor_string).round(14)
-          
+
           render json: { unit_name: unit_string, multiplication_factor: m_factor }
       else
           render json: { status: 400, error: "Please enter in valid units" }
       end
     end
 
-    
+
 
 end
 
